@@ -29,18 +29,18 @@ namespace Hit_and_Blow
             InitializeComponent();
 
             //テーマを取得
-            //Visibility light = (Visibility)Resources["PhoneLightThemeVisibility"];
-            //Visibility dark = (Visibility)Resources["PhoneDarkThemeVisibility"];
-            //if (light == System.Windows.Visibility.Visible)
-            //{
-            //    // テーマはLight！！
-            //    this.set_light_tema();
-            //}
-            //if (dark == System.Windows.Visibility.Visible)
-            //{
-            //    // テーマはDark！！
-            //    this.set_dark_tema();
-            //}
+            Visibility light = (Visibility)Resources["PhoneLightThemeVisibility"];
+            Visibility dark = (Visibility)Resources["PhoneDarkThemeVisibility"];
+            if (light == System.Windows.Visibility.Visible)
+            {
+                // テーマはLight！！
+                this.set_light_tema();
+            }
+            if (dark == System.Windows.Visibility.Visible)
+            {
+                // テーマはDark！！
+                this.set_dark_tema();
+            }
 
             //初期化
             this.level_no = 1;
@@ -54,28 +54,28 @@ namespace Hit_and_Blow
             tmr.Start();
         }
         //Lightテーマの設定
-        //private void set_light_tema()
-        //{
-        //   // this.Txt_Ans.Foreground = new SolidColorBrush(Colors.Black);
-        //   // this.Txt_Hint_MSG.Foreground = new SolidColorBrush(Colors.Black);
-        //   // this.ContentPanel.Background = new SolidColorBrush(Colors.White);
-        //   // this.Lbl_DSP.Foreground = new SolidColorBrush(Colors.White);
-        //   // this.Lst_MSG.Foreground = new SolidColorBrush(Colors.Black);
-        //   // this.toggleSwitch.Background = new SolidColorBrush(Colors.Black);
-        //   // this.Btn_Check.BorderBrush = new SolidColorBrush(Colors.Black);
+        private void set_light_tema()
+        {
+            this.Txt_Ans.Foreground = new SolidColorBrush(Colors.Black);
+            this.Txt_Hint_MSG.Foreground = new SolidColorBrush(Colors.Black);
+            this.ContentPanel.Background = new SolidColorBrush(Colors.White);
+            this.Lbl_DSP.Foreground = new SolidColorBrush(Colors.White);
+            this.Lst_MSG.Foreground = new SolidColorBrush(Colors.Black);
+            this.toggleSwitch.Background = new SolidColorBrush(Colors.Black);
+            this.Btn_Check.BorderBrush = new SolidColorBrush(Colors.Black);
 
-        //}
-        ////Darkテーマの設定
-        //private void set_dark_tema()
-        //{
-        //  //  this.Txt_Ans.Foreground = new SolidColorBrush(Colors.Black);
-        //  //  this.Txt_Hint_MSG.Foreground = new SolidColorBrush(Colors.White);
-        //  //  this.ContentPanel.Background = new SolidColorBrush(Colors.Black);
-        //  //  this.Lbl_DSP.Foreground = new SolidColorBrush(Colors.White);
-        //  //  this.Lst_MSG.Foreground = new SolidColorBrush(Colors.White);
-        //  //  this.toggleSwitch.Background = new SolidColorBrush(Colors.White);
-        //  //  this.Btn_Check.BorderBrush = new SolidColorBrush(Colors.White);
-        //}
+        }
+        //Darkテーマの設定
+        private void set_dark_tema()
+        {
+            this.Txt_Ans.Foreground = new SolidColorBrush(Colors.Black);
+            this.Txt_Hint_MSG.Foreground = new SolidColorBrush(Colors.White);
+            this.ContentPanel.Background = new SolidColorBrush(Colors.Black);
+            this.Lbl_DSP.Foreground = new SolidColorBrush(Colors.White);
+            this.Lst_MSG.Foreground = new SolidColorBrush(Colors.White);
+            this.toggleSwitch.Background = new SolidColorBrush(Colors.White);
+            this.Btn_Check.BorderBrush = new SolidColorBrush(Colors.White);
+        }
         //tmr_Tickイベント
         private void tmr_Tick(object sender, EventArgs e)
         {
